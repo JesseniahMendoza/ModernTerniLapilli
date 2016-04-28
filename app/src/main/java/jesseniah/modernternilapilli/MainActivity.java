@@ -1,6 +1,7 @@
 package jesseniah.modernternilapilli;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -32,6 +33,9 @@ public class MainActivity extends Activity implements OnClickListener {
         //Note: So below you see that I set the onCreate and just like I above like a beat.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getIntent();
+        (Intent.putExtra("RealIntent1", "RealIntent2");
 
         a1 = (Button) findViewById(R.id.A1);
         b1 = (Button) findViewById(R.id.B1);

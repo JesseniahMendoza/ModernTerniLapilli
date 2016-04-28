@@ -33,8 +33,8 @@ public class GameStartActivity extends AppCompatActivity {
 
                 Intent mainIntent = new Intent(
                         GameStartActivity.this, MainActivity.class);
+                 (mainIntent.putExtra("RealIntent1" , "RealIntent2");
                 startActivity(mainIntent);
-                // (mainIntent.putExtra("RealIntent");
             }
         });
     }
