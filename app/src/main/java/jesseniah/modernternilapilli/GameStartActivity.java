@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
 
 public class GameStartActivity extends AppCompatActivity {
 
@@ -17,15 +18,23 @@ public class GameStartActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        EditText et1 = (EditText)findViewById(R.id.player_one_name);
+        EditText et2 = (EditText)findViewById(R.id.player_two_name);
+
+        String player1 = et1.getText().toString();
+        String player2 = et2.getText().toString();
+
+
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.trueId);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(
-                        GameStartActivity.this,MainActivity.class);
-
-                startActivity(intent);
+                Intent mainIntent = new Intent(
+                        GameStartActivity.this, MainActivity.class);
+                startActivity(mainIntent);
+                // (mainIntent.putExtra("RealIntent");
             }
         });
     }

@@ -12,9 +12,24 @@
     tools:context=".GameStartActivity"
     tools:showIn="@layout/activity_main2"
     >
+
+    <EditText
+        android:id="@+id/player_one_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="If your Player 1 your O."/>
+
+    <EditText
+        android:id="@+id/player_two_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="If your Player 2 you are X."
+        android:layout_below="@id/player_one_name"/>
+
     <TextView
+        android:layout_marginTop="440dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Press Envelope to Continue"/>
+        android:text="Press Envelope to Continue-->"/>
 
 </RelativeLayout>
