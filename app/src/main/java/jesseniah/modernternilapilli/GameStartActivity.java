@@ -28,12 +28,14 @@ public class GameStartActivity extends AppCompatActivity {
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.trueId);
         fab.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
 
                 Intent mainIntent = new Intent(
                         GameStartActivity.this, MainActivity.class);
-                 (mainIntent.putExtra("RealIntent1" , "RealIntent2");
+                mainIntent.putExtra("RealIntent1" , "player1");
+                mainIntent.putExtra("RealIntent2", "player2");
                 startActivity(mainIntent);
             }
         });

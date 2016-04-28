@@ -34,8 +34,6 @@ public class MainActivity extends Activity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getIntent();
-        (Intent.putExtra("RealIntent1", "RealIntent2");
 
         a1 = (Button) findViewById(R.id.A1);
         b1 = (Button) findViewById(R.id.B1);
@@ -77,6 +75,9 @@ public class MainActivity extends Activity implements OnClickListener {
 //Override 2
     @Override
     public void onClick(View v) {
+        Intent i = getIntent();
+        String player1  = i.getStringExtra("RealIntent1");
+        String player2 = i.getStringExtra("RealIntent2");
         buttonClicked(v);
     }
 
