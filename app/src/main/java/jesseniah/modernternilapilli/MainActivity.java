@@ -55,7 +55,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
             @Override
             public void onClick(View v) {
-                //There are the booleans that I set earlie
+                //There are the booleans that I set earlier
                 turn = true;
                 turn_count = 0;
                 enableOrDisable(true);
