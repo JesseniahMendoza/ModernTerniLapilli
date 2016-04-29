@@ -4,13 +4,6 @@
     android:layout_height="match_parent" >
 
 
-    <TextView
-        android:layout_marginTop="440dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text=" "
-        android:id="@+id/name_one"/>
-
 
     <Button
         android:id="@+id/B2"
@@ -132,7 +125,13 @@
         android:text="Refresh IceCubes"
         />
 
-
+    <TextView
+        android:layout_width="230dp"
+        android:layout_height="50dp"
+        android:text="New Text"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
