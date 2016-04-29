@@ -3,6 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
+
+    <TextView
+        android:layout_marginTop="440dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text=" Go "/>
+
     <Button
         android:id="@+id/B2"
         android:layout_width="64dip"
