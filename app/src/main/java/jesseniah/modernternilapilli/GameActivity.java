@@ -13,6 +13,11 @@ import android.widget.Toast;
 
 
 
+
+
+
+
+
 public class GameActivity extends Activity implements OnClickListener {
     TextView name1;
     boolean turn = true;
@@ -140,12 +145,12 @@ public class GameActivity extends Activity implements OnClickListener {
 
         if (there_is_a_winner) {
             if (!turn)
-                message(player1 + "Player1");
+                message(player1 + " Won!");
             else
-                message(player2 + "Player 2");
+                message(player2 + " Won!");
             enableOrDisable(false);
         } else if (turn_count == 9)
-            message("Oh Snap Its a TIE!");
+            message("Oh its a Tie");
 
     }
 
