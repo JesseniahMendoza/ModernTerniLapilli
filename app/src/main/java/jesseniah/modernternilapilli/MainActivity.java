@@ -23,8 +23,7 @@ public class MainActivity extends Activity implements OnClickListener {
     //are set in a list Array 1,2,3 ..Button 1,2,3 ...and click 1,2,3
     Button[] bArray = null;
     Button a1, a2, a3, b1, b2, b3, c1, c2, c3;
-
-
+    String player1, player2;
 
 
     //Override 1
@@ -52,7 +51,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
         for (Button b : bArray)
             b.setOnClickListener(this);
-        //ok..so below I set the new button and im calling it with the id.
+        //ok..so below I set the new button and im calling it with the id\
         //the id I got from the xml activity when I started setting the buttons.
         Button bnew = (Button) findViewById(R.id.button1);
         bnew.setOnClickListener(new OnClickListener() {
@@ -76,8 +75,8 @@ public class MainActivity extends Activity implements OnClickListener {
     @Override
     public void onClick(View v) {
         Intent i = getIntent();
-        String player1  = i.getStringExtra("RealIntent1");
-        String player2 = i.getStringExtra("RealIntent2");
+        player1  = i.getStringExtra("RealIntent1");
+        player2 = i.getStringExtra("RealIntent2");
         buttonClicked(v);
     }
 
@@ -129,9 +128,9 @@ public class MainActivity extends Activity implements OnClickListener {
             there_is_a_winner = true;
         if (there_is_a_winner) {
             if (!turn)
-                message("X wins");
+                message(player1 + "wins");
             else
-                message("O wins");
+                message(player2 + "wins");
             enableOrDisable(false);
         } else if (turn_count == 9)
             message("Draw!");
