@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnClickListener {
@@ -15,7 +16,7 @@ public class MainActivity extends Activity implements OnClickListener {
     //Alright so below I started off with a boolean that is tells me if
     //the players turn is true.So IF it is true it end up being equal to  X and if its
     //false then it will be equal to Zero.
-
+    TextView name1;
     boolean turn = true;
     int turn_count = 0;
     //Note:
@@ -33,7 +34,7 @@ public class MainActivity extends Activity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        name1 = (TextView)findViewById(R.id.name_one);
         a1 = (Button) findViewById(R.id.A1);
         b1 = (Button) findViewById(R.id.B1);
         c1 = (Button) findViewById(R.id.C1);
