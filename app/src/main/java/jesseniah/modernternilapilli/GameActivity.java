@@ -1,7 +1,9 @@
 package jesseniah.modernternilapilli;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -9,14 +11,6 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-Color;
-
-
-
-
-
-
 
 
 
@@ -37,6 +31,9 @@ public class GameActivity extends Activity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
 
         name1 = (TextView)findViewById(R.id.textView);
         a1 = (Button) findViewById(R.id.A1);
@@ -151,6 +148,14 @@ public class GameActivity extends Activity implements OnClickListener {
                 message(player1 + " Won!");
             else
                 message(player2 + " Won!");
+
+            SharedPreferences sharedPreferences = getSharedPreferences("key", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+
+            //define the name of the winner
+            String nameOfWinner = "";
+            editor.putString("winner", nameOfWinner);
+            editor.commit();
             enableOrDisable(false);
         } else if (turn_count == 9)
             message("Oh its a Tie");
